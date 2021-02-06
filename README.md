@@ -8,9 +8,9 @@ That issue is captured here: https://github.com/opensource9ja/danfojs/issues/107
 
 ## The second issue
 
-is much harder to understand. When you uncomment `danfojs@0.1.2/dist/index.min.js` and point at latest instead. Everything seems to work just fine!
+is much harder to understand. When you use `danfojs@0.1.2/dist/index.min.js` instead of latest, everything seems to work just fine!
 
-But the very last model that is getting trained errors.
+The issue seems to be this code here, which seems unrelated to Danfo.js.  However, the only thing I'm changing between the two, is the version of Danfo and that seems to break this code.
 
 ```ts
 const history = await transferModel.fit(featureX, Y, {
